@@ -1,0 +1,17 @@
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        Projeto2
+    </a>
+    
+    <ul class="navbar-nav me-auto" >
+        <li>
+            <a class="nav-link" href="/">Home</a>
+        </li> 
+        <% categories.forEach(category =>{ %>
+            <li>
+                <a class="nav-link" href="/category/<%= category.slug %>"><%= category.title %></a>
+            </li>    
+        <% }) %>
+    </ul>
+</nav>

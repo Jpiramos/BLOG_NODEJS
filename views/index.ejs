@@ -1,0 +1,29 @@
+<%-include("partials/header.ejs")%>
+<%-include("partials/homenavbar.ejs")%>
+<body>
+   <div class="container ">
+    <hr class="my-4">
+    <div class="mt-4 p-5 bg-dark text-white rounded">
+        <h1 class="display-4">Blog do Jaypi</h1>
+        <p class="lead">Blog pra estudos de Nodejs</p>
+        <hr class="my-4">
+        <p class="lead">Projeto 2 na serie de estudos de Nodejs, express, sequelize e Mysql. Desenvolvido em Julho de 2022.</p>
+        <a href="https://leiamais.uol.com.br/#rmcl" target="blank" class="btn btn-primary btn-lg" role="button">Leia mais</a>
+      </div>
+      <br>
+    <% articles.forEach(article=>{%>
+        <div class="card">
+            <div class="card-header">
+               <h2> <%= article.title %></h2>
+            </div>
+
+            <div class="card-body">
+                <a class="btn btn-dark" href="/<%= article.slug %>">Ler Artigo</a>
+            </div>
+        </div>
+        <br>
+       <% }) %>
+   </div>
+
+</body>
+<%-include("partials/footer.ejs")%>
